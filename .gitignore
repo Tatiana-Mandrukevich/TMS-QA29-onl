@@ -43,8 +43,5 @@ bin/
 
 /.idea/*
 /build/*
-/gradle/*
 /build.gradle.kts
-/gradlew
-/gradlew.bat
-/settings.gradle.kts
+/_MyLaucher/*

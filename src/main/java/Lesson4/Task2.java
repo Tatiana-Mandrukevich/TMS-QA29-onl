@@ -3,7 +3,7 @@ package Lesson4;
 import java.util.Random;
 
 public class Task2 {
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         System.out.print("Массив: ");
         int[] mass = new int[10]; // создала массив с определенным размером - 10 значений
         for (int i = 0; i < mass.length; i++) { // цикл для записи значений в массив

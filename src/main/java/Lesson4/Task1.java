@@ -1,7 +1,7 @@
 package Lesson4;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         int [] firstMass = {22, 5, 39, 8, 16, 99, 55, 83, 303}; // создан первый массив - 9 значений
         int [] secondMass = {88, 99, 25, 39, 101, 22, 6}; // создан второй массив - 7 значений
         System.out.print("Элементы, которые встречаются в двух массивах: ");
