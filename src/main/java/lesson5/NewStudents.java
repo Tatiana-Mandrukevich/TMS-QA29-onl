@@ -4,7 +4,7 @@
 Попробуйте любому студенту поменять количество занятий, которые он посещает.
 Снова выведите информацию об этом студенте.*/
 
-package Lesson5;
+package lesson5;
 
 public class NewStudents {
     public static void main(String[] args) {

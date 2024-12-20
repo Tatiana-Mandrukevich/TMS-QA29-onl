@@ -1,6 +1,6 @@
 //Создайте массив из нескольких товаров.
 
-package Lesson6.Task1;
+package lesson6.task1;
 
 public class Task1 {
     public static void main(String[] args) {

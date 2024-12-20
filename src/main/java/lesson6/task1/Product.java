@@ -4,7 +4,7 @@
 3) Наименование - string
 4) Наличие - boolean*/
 
-package Lesson6.Task1;
+package lesson6.task1;
 
 public class Product {
     public ProductType productType;

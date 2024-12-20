@@ -5,7 +5,7 @@
 Необходимо вернуть количество товаров, которые есть в наличии
  */
 
-package Lesson6.Task1;
+package lesson6.task1;
 
 public class ProductService {
     public int getSum(Product[] products, ProductType productType) {

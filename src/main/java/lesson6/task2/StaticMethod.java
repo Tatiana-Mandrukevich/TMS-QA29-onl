@@ -1,7 +1,7 @@
 /*Необходимо создать статический метод, который принимает строку и число.
 Его задача вывести строку указанное количество раз.*/
 
-package Lesson6.Task2;
+package lesson6.task2;
 
 public class StaticMethod {
     public static void printString(String string, int count) {

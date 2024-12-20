@@ -1,6 +1,6 @@
 //Тип товара (enum - MOBILE, TV, AUDIO)
 
-package Lesson6.Task1;
+package lesson6.task1;
 
 public enum ProductType {
     MOBILE,
