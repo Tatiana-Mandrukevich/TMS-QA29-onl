@@ -3,7 +3,9 @@
 
 package lesson7.service;
 
-public interface PreparingOrder {
+import lesson7.domain.Order;
 
-    void printOrderStatus();
+public interface StatusOrder {
+
+    void printOrderStatus(Order order);
 }

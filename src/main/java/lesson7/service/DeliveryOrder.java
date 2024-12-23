@@ -6,10 +6,11 @@
 
 package lesson7.service;
 
+import lesson7.domain.Order;
+
 public interface DeliveryOrder {
 
-    default void deliverOrder() {
-        System.out.println("Заказ готов.");
+    default void deliverOrder(Order order) {
         System.out.println("Выдача заказа через окно выдачи.");
     }
 }

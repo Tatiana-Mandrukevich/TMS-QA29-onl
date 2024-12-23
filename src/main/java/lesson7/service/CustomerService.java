@@ -7,6 +7,6 @@ import lesson7.domain.Order;
 import lesson7.domain.OrderProcessorType;
 
 public interface CustomerService {
-    OrderProcessor getOrderProcessor(OrderProcessorType orderProcessorType);
+//  OrderProcessor getOrderProcessor(OrderProcessorType orderProcessorType);
     void processOrder(Order order);
 }

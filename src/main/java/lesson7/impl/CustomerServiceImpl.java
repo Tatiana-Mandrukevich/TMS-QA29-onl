@@ -1,13 +1,22 @@
 package lesson7.impl;
 
 import lesson7.domain.Order;
-import lesson7.domain.OrderProcessorType;
 import lesson7.service.CustomerService;
-import lesson7.service.OrderProcessor;
+import lesson7.service.SaveOrder;
+import lesson7.service.StatusOrder;
 
 public class CustomerServiceImpl implements CustomerService {
 
-    @Override
+    private SaveOrder saveOrder;
+    private StatusOrder statusOrder;
+
+    public CustomerServiceImpl(SaveOrder saveOrder, StatusOrder statusOrder) {
+        this.saveOrder = saveOrder;
+        this.statusOrder = statusOrder;
+
+    }
+
+/*    @Override
     public OrderProcessor getOrderProcessor(OrderProcessorType orderProcessorType) {
         switch (orderProcessorType){
             case PHONE:
@@ -19,25 +28,24 @@ public class CustomerServiceImpl implements CustomerService {
             default:
                 return null;
         }
-    }
+    }*/
 
     @Override
     public void processOrder(Order order) {
 
-        SaveOrderDBImpl saveOrderDB = new SaveOrderDBImpl();
-        saveOrderDB.saveOrder(order);
+//      SaveOrderDBImpl saveOrderDB = new SaveOrderDBImpl();
+        saveOrder.saveOrder(order);
 
-        PreparingOrderInProcessImpl preparingOrderInProcess = new PreparingOrderInProcessImpl();
-        preparingOrderInProcess.printOrderStatus();
+        statusOrder.printOrderStatus(order);
 
         switch (order.getDeliveryType()){
             case HOME:
                 DeliveryOrderHomeImpl deliveryOrderHome = new DeliveryOrderHomeImpl();
-                deliveryOrderHome.deliverOrder();
+                deliveryOrderHome.deliverOrder(order);
                 break;
             case WINDOW:
                 DeliveryOrderWindowImpl deliveryOrderWindow = new DeliveryOrderWindowImpl();
-                deliveryOrderWindow.deliverOrder();
+                deliveryOrderWindow.deliverOrder(order);
                 break;
         }
     }

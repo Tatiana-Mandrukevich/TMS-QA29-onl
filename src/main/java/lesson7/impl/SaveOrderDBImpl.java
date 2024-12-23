@@ -10,6 +10,6 @@ public class SaveOrderDBImpl implements SaveOrder {
         System.out.println("Параметры заказа:");
         System.out.println("Блюдо: " + order.getFood());
         System.out.println("Количество: " + order.getCount());
-        System.out.println("Способ доставки: " + order.getDeliveryTypeDescription());
+        System.out.println("Способ доставки: " + order.getDeliveryType());
     }
 }

@@ -29,7 +29,7 @@ public class Order {
         return deliveryOrderType;
     }
 
-    public String getDeliveryTypeDescription(){
+/*    public String getDeliveryTypeDescription(){
         switch (deliveryOrderType){
             case HOME:
                 return "Доставка по адресу.";
@@ -38,5 +38,5 @@ public class Order {
             default:
                 return deliveryOrderType.toString();
         }
-    }
+    }*/
 }
