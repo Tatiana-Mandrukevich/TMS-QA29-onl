@@ -1,37 +1,37 @@
 package lesson9.service.impl;
 
 import lesson9.User;
-import lesson9.exc.FinishGame;
-import lesson9.exc.IncorrectBet;
-import lesson9.exc.NumberOutOfRange;
+import lesson9.exc.FinishGameException;
+import lesson9.exc.IncorrectBetException;
+import lesson9.exc.NumberOutOfRangeException;
 import lesson9.service.GameService;
 
 public class GameServiceImpl implements GameService {
     @Override
-    public void validate(int gameBet, int balance) throws IncorrectBet{
+    public void validate(int gameBet, int balance) throws IncorrectBetException {
         // изменила условие "ставка меньше, чем сумма на счете пользователя" на меньше или равно,
         // чтобы в дальнейшем нормально отрабатывала проверка на то, что баланс равен 0.
         if (gameBet <= balance && gameBet < 100) {
             System.out.println("The bet has been accepted.");
         }
         else {
-            throw new IncorrectBet();
+            throw new IncorrectBetException();
         }
     }
 
     @Override
-    public boolean play(int userNumber) throws NumberOutOfRange{
+    public boolean play(int userNumber) throws NumberOutOfRangeException {
 
         int randomNumber = (int) (Math.random() * 6);
         System.out.println("Generated number is " + randomNumber);
 
         if (userNumber >= -1 && userNumber <= 5) {
             if (userNumber == -1) {
-                throw new FinishGame("Unfortunately, you are leaving the game.");
+                throw new FinishGameException("Unfortunately, you are leaving the game.");
             }
         }
         else {
-            throw new NumberOutOfRange();
+            throw new NumberOutOfRangeException();
         }
 
         if (userNumber == randomNumber) {

@@ -1,8 +1,8 @@
 package lesson9.service.impl;
 
 import lesson9.User;
-import lesson9.exc.IncorrectBet;
-import lesson9.exc.NumberOutOfRange;
+import lesson9.exc.IncorrectBetException;
+import lesson9.exc.NumberOutOfRangeException;
 import lesson9.service.GameService;
 import lesson9.service.HandlerService;
 
@@ -44,7 +44,7 @@ public class HandlerServiceImpl implements HandlerService {
 
             try {
                 gameService.validate(bet, user.getBalance());
-            } catch (IncorrectBet betExc) {
+            } catch (IncorrectBetException betExc) {
                 System.out.println("Please enter a different game bet.");
                 continue;
             }
@@ -54,7 +54,7 @@ public class HandlerServiceImpl implements HandlerService {
             try {
                 result = gameService.play(number);
                 break;
-            } catch (NumberOutOfRange numberExc) {
+            } catch (NumberOutOfRangeException numberExc) {
                 System.out.println("Your number is out of range.");
             }
         }
