@@ -8,9 +8,9 @@ import java.util.*;
 public class UserServiceImpl implements UserService {
 
     @Override
-    public Set getUniqueNames(List<User> originalCollection) {
+    public Set<String> getUniqueNames(List<User> originalCollection) {
 
-        Set<String> collectionByUniqueName = new TreeSet<>();
+        Set<String> collectionByUniqueName = new HashSet<>();
 
         for (User user : originalCollection) {
             collectionByUniqueName.add(user.getName());
@@ -20,13 +20,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Map getSortByAge(List<User> originalCollection) {
+    public Set<User> getSortByAge(List<User> originalCollection) {
 
-        Map collectionByAge = new TreeMap<>();
+        Set<User> collectionByAge = new TreeSet<>();
 
-        for (User user : originalCollection) {
-            collectionByAge.put(user.getAge(), user.getName());
-        }
+        collectionByAge.addAll(originalCollection);
 
         return collectionByAge;
     }

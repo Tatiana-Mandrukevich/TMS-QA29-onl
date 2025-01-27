@@ -32,7 +32,7 @@ public class MainApp {
 
         NumberService numbersService = new NumberServiceImpl();
 
-        System.out.println("Final collection (unique number = repeat in list)" + numbersService.getUniqueNumbers(originalCollection));
+        System.out.println("Final collection (unique number = repeat in list)" + numbersService.getUniqueNumbersRepeats(originalCollection));
 
     }
 }

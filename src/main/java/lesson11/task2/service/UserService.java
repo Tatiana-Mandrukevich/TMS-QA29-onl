@@ -8,6 +8,6 @@ import java.util.Set;
 
 public interface UserService {
 
-    public Set getUniqueNames(List<User> originalCollection);
-    public Map getSortByAge (List<User> originalCollection);
+    public Set<String> getUniqueNames(List<User> originalCollection);
+    public Set<User> getSortByAge (List<User> originalCollection);
 }

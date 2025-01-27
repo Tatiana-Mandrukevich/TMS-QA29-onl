@@ -5,5 +5,5 @@ import java.util.Map;
 
 public interface NumberService {
 
-    public Map getUniqueNumbers(List<Integer> originalCollection);
+    public Map<Integer, Integer> getUniqueNumbersRepeats(List<Integer> originalCollection);
 }

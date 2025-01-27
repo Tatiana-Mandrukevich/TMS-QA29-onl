@@ -1,6 +1,8 @@
 package lesson11.task2;
 
-public class User {
+import java.util.Objects;
+
+public class User implements Comparable<User> {
 
     private String name;
     private Integer age;
@@ -32,10 +34,8 @@ public class User {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null || getClass() != obj.getClass()) return false;
-        User other = (User) obj;
-        return this.name.equals(other.name) && this.age == other.age;
+    public int compareTo(User other) {
+        return this.age - other.age; // Сортировка по возрасту
     }
 
     @Override

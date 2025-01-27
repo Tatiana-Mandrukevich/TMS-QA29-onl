@@ -9,7 +9,7 @@ import java.util.Map;
 public class NumberServiceImpl implements NumberService {
 
     @Override
-    public Map getUniqueNumbers(List<Integer> originalCollection) {
+    public Map<Integer, Integer> getUniqueNumbersRepeats(List<Integer> originalCollection) {
 
         Map<Integer, Integer> finishCollection = new HashMap<>();
 
